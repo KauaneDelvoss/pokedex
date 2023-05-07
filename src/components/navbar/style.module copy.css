@@ -1,0 +1,31 @@
+.default {
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    /* padding: 0px; */
+    height: 4em;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.default ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    margin: 0 10px;
+}
+.default li {
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.default li:hover {
+    background-color: #ccc;
+    height: 100%;
+}
