@@ -1,0 +1,139 @@
+/* TIPOS */
+
+.grass {
+    background: #7ac74c;
+}
+
+.normal {
+    background: #a8a77a;
+}
+
+.fire {
+    background: #ee8130;
+}
+
+.water {
+    background: #6390f0;
+}
+
+.electric {
+    background: #f7d02c;
+}
+
+.fighting {
+    background: #c22e28;
+}
+
+.poison {
+    background: #a33ea1;
+}
+
+.ground {
+    background: #e2bf65;
+}
+
+.flying {
+    background: #a98ff3;
+}
+
+.psychic {
+    background: #f95587;
+}
+
+.bug {
+    background: #a6b91a;
+}
+
+.rock {
+    background: #b6a136;
+}
+
+.ghost {
+    background: #735797;
+}
+
+.ice {
+    background: #96d9d6;
+}
+
+.dragon {
+    background: #6f35fc;
+}
+
+.dark {
+    background: #705746;
+}
+
+.steel {
+    background: #b7b7ce;
+}
+
+.fairy {
+    background: #d685ad;
+}
+
+.span {
+    border-radius: 5px;
+    padding: 3px;
+}
+
+
+.card {
+    width: 15%;
+    height: 30vh;
+    min-width: 10%;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin-bottom: 3%;
+    justify-content: center;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+
+.img {
+    /* width: 100%; */
+    height: 70%;
+    /* object-fit: cover; */
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0px auto;
+}
+
+.data {
+    padding: 2px 16px;
+    justify-content: center;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    height: 100%;
+    display: block;
+
+}
+
+.data span {
+    margin: 0px 5px;
+    width: 50%;
+    text-align: center;
+}
+
+.data h1 {
+    padding: 0px auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.data h2 {
+    justify-content: space-evenly;
+    display: flex;
+}
