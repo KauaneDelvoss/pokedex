@@ -1,0 +1,28 @@
+.main {
+    padding: 4rem;
+    /* border: 1px solid rgb(53, 115, 167); */
+    width: 80%;
+    margin: 0 auto 0em auto;
+    /* height: 80vh; */
+    min-height: 100%;
+    border-radius: 10px;
+    overflow: auto;
+    /* margin: 0px auto; */
+    /* padding: 0em 3em; */
+}
+.header {
+    margin: 0 0 0 0 ;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+    /* padding: 1em 3em 0em 3em; */
+    justify-content: space-between;
+    display: flex;
+}
+
+.content {
+    padding: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
