@@ -5,26 +5,29 @@ import Container from './components/container';
 import Pokedex from './pages/pokedex/index';
 import Home from './pages/home/index';
 import About from './pages/about/index';
+import Pokemon from './pages/pokemon/index';
 
 function App() {
   return (
     <Router>
 
-    <Navbar/> 
+      <Navbar />
 
-    <Container customClass="min-height">
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        {/* <Route path="/produtos" element={<Produtos/>}/>
+      <Container customClass="min-height">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/produtos" element={<Produtos/>}/>
         <Route path="/tipos_produtos" element={<Tipos/>}/> */}
-        <Route path="/pokedex" element={<Pokedex/>}/>
-      </Routes>
-    </Container>
+          <Route path="/pokedex" element={<Pokedex />} />
+          <Route path="/pokemon/:id" element={<Pokemon />} />
 
-    {/* <Footer/> */}
+        </Routes>
+      </Container>
 
-  </Router>
+      {/* <Footer/> */}
+
+    </Router>
   );
 }
 

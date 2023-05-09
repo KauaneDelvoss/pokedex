@@ -1,16 +1,20 @@
 .default {
     /* margin: 20px auto ; */
     /* padding: 10px; */
-    width: 90%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
     display: block;
     justify-content: center;
     overflow: none;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
+
 .min-height {
-    min-height: auto;
+    min-height: calc(100vh - 4em);
+    /* background-color: rgba(137, 43, 226, 0.267); */
+    background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.322), rgba(243, 222, 33, 0.342));
 }
+
 .flex {
     display: flex;
     justify-content: space-between;
@@ -19,4 +23,5 @@
     height: 100%;
     margin: 0px;
     padding: 0px;
+    /* border: 1px solid blueviolet; */
 }

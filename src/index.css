@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+
 }
 
 code {
@@ -14,4 +16,19 @@ code {
 
 * {
   /* border: 1px solid rgba(255, 0, 0, 0.425); */
+}
+
+h1 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 1.3em;
+  margin: 0px;
+}
+
+h2 {
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+  font-size: 1em;
+
 }
