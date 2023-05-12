@@ -1,7 +1,7 @@
 import style from './style.module.css';
 function Main(props) {
 
-    const [header, content] = props.children;
+    const [header, content, buttons] = props.children;
 
 
     return (
@@ -11,6 +11,9 @@ function Main(props) {
             </div>
             <div className={style.content}>   
                 {content}
+            </div>
+            <div className={style.buttons}>
+                {buttons}
             </div>
         </div>
     )
