@@ -1,0 +1,19 @@
+.list {
+
+    list-style: none;
+    width: 100%;
+    padding: 0px;
+}
+
+.item {
+    width: auto;
+    margin-bottom: 0.7em;
+    padding: 0.2em;
+    box-shadow: rgba(68, 68, 68, 0.2) 0px 2px 8px 0px;
+    background-color: rgba(255, 255, 255, 0.733);
+    padding: 2%;
+    border-radius: 5px;
+}
+.item span {
+    text-transform: capitalize;
+}

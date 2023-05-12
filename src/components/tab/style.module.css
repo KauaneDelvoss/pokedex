@@ -6,7 +6,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border: 1px solid #39a2db;
+        border: 1px solid #ff01016b;
         padding: 0px;
         /* border-radius: 2rem; */
      }
@@ -32,5 +32,7 @@
           }
           
           ul.nav li.active {
-            background: #39a2db;
+            background: #db3939cb;
           }
+
+

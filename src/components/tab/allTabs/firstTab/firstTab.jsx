@@ -3,18 +3,20 @@ import style from './style.module.css';
 import Loading from '../../../../img/loading.svg';
 import { useParams } from 'react-router-dom';
 import { useState } from "react";
+import Interrogacao from '../../../../img/interrogacao.png';
+
 import axios from 'axios';
+import GeneralPokemon from './generalPokemon';
+import HabilitiesPokemon from './habilitiesPokemon';
+import BoxContent from "./boxContent";
 
 function FirstTab() {
     const { id } = useParams();
     const [poke, setPoke] = useState({})
     const [isLoading, setIsLoading] = useState(false)
-    const [slide, setSlide] = useState(1)
+    const [backPokemon, setBackPokemon] = useState(false)
 
-    function plusSlides(n) {
-        var newslide = slide + n
-        setSlide(newslide)
-    }
+    
 
     useEffect(() => {
         function getPokemonById(){
@@ -33,78 +35,33 @@ function FirstTab() {
   return (
     <div className={style.content}> 
         {isLoading ? <img src={Loading} alt="loading" /> : (Object.keys(poke).length > 0 ? (
-
             <Fragment>
-                <div className={style.slideshow}>
-                    <div className={style.img}>
-                        <div className={style.numbertext}>
-                            1/2
-                        </div>
-                    
-                        <img src={isLoading ? Loading : (Object.keys(poke).length > 0 ? poke.sprites.front_default : "no image")} alt="" className={`${style.img} ${poke?.types ? style[poke.types[0].type.name] : ''}`} />
-                        <div className="text">Caption text</div>
-                    </div> 
-                    <div className={style.img}>
-                    <div className={style.numbertext}>
-                        2/2
-                    </div>
                 
-                    <img src={isLoading ? Loading : (Object.keys(poke).length > 0 ? poke.sprites.back_default : "no image")} alt="" className={`${style.img} ${poke?.types ? style[poke.types[0].type.name] : ''}`} />
-                    <div className="text">Caption text</div>
-                </div> 
-                    
-                    
-                    {/* <a className={style.prev} onclick={ plusSlides(-1)}>&#10094;</a>
-                    <a className={style.next} onclick={plusSlides(1)}>&#10095;</a> */}
-                    <div >
-                        <span className={style.dot} onclick={()=>setSlide(1)}></span>
-                        <span className={style.dot} onclick={()=>setSlide(2)}></span>
-                        <span className={style.dot} onclick={()=>setSlide(3)}></span>
-                    </div>
-                </div>
-                
-                <div className={style.info}>
-                <h1>
-                Name: <span>{Object.keys(poke).length > 0 ? poke.name : "zuado"}</span>
-                </h1>
-                <h1>
-                    Altura: <span>{Object.keys(poke).length > 0 ? poke.height : "zuado"}</span>
-                </h1>
-                    <h1>
-                    Peso: {Object.keys(poke).length > 0 ? poke.weight : "zuado"}
-                    </h1>
-                    <h1>
-                        Tipos: <span>{(Object.keys(poke).length > 0 ? poke.types.map((type) => <span key={type.type.name}>{type.type.name}</span>) : <div>Zuado!</div>)}</span>
-                    </h1>
-                    <div className={style.status}>
-                    <h1> Status</h1>
-                    <h2>
-                        HP: <span>78</span>
+                <BoxContent >
+                        <img src={
+                            isLoading ? Loading :
+                             (Object.keys(poke).length > 0 ? (backPokemon ? (
+                                     poke.sprites.back_default ? poke.sprites.back_default : Interrogacao
+                                ) : ( poke.sprites.front_default ? poke.sprites.front_default : Interrogacao)) : " no image"
+                                
+                            ) } alt="" className={style.img} onMouseEnter = {() => setBackPokemon(true)} onMouseLeave={() => setBackPokemon(false)} onClick={()=> setBackPokemon(!backPokemon)}
+                        
+                        />
 
-                    </h2>
-                    <h2>
-                        Attack: <span>84</span>
-                    </h2>
-                    <h2>
-                        Defense: <span>78</span>
-                    </h2>
-                    <h2>
-                        Special Attack: <span>109</span>
-                    </h2>
-                    <h2>
-                        Special Defense: <span>85</span>
-                    </h2>
-                    <h2>
-                        Speed: <span>100</span>
-                    </h2>
-                    
-                </div>
-                </div>
-       
+                        
+                            {/* // (backPokemon ? (poke.sprites.back_default? poke.sprites.back_default : <div>Não existe</div>) : (poke.sprites.front_default? poke.sprites.front_default : <div>Não existe</div>)) : "no image")
+                            // } alt="" className={`${style.img} ${poke?.types ? style[poke.types[0].type.name] : ''}`} onMouseEnter = {() => setBackPokemon(true)} onMouseLeave={() => setBackPokemon(false)} onClick={()=> setBackPokemon(!backPokemon)} */}
+                            
+                        
+                </BoxContent>
+                <BoxContent>
+                    <GeneralPokemon poke={poke} />
+                </BoxContent>
+                <BoxContent>
+                    <HabilitiesPokemon poke={poke}/>
+                </BoxContent>
             </Fragment>
-            
             ) : <div>Zuado!</div>)}
-        
     </div>
   );
 }

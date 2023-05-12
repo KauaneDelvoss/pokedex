@@ -1,4 +1,5 @@
 import {Fragment, useEffect } from "react";
+import MovesComponent from "./movesComponent";
 import style from './style.module.css';
 import Loading from '../../../../img/loading.svg';
 import { useParams } from 'react-router-dom';
@@ -30,11 +31,10 @@ function SecondTab() {
         <h1>
             MOVES
         </h1>
-        <ul className={style.list}>
             {isLoading ? <img src={Loading} alt="loading" /> : (Object.keys(poke).length > 0 ? (
-                poke.moves.map((move) => <li className={style.item} key={move.move.name}><h2>{move.move.name}
-                    </h2></li>)) : <div>Zuado!</div>)}
-        </ul>
+                poke.moves.map((move) => <MovesComponent urlToFetch={move.move.url} name={move.move.name}/> )) : <div>Zuado!</div>)}
+            
+            
         
     </div>
   );
