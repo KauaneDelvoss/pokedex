@@ -12,8 +12,16 @@
 .min-height {
     min-height: calc(100vh - 4em);
     /* background-color: rgba(137, 43, 226, 0.267); */
-    background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.322), rgba(243, 222, 33, 0.342));
+    /* background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.322), rgba(243, 222, 33, 0.342)); */
+    background-image: url('../../img/pokemon-wallpaper.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    /* background-size: cover;
+    background-position: center; */
+
 }
+
 
 .flex {
     display: flex;
@@ -24,4 +32,13 @@
     margin: 0px;
     padding: 0px;
     /* border: 1px solid blueviolet; */
+}
+
+@media( max-width: 480px) {
+    .min-height {
+        /* min-height: calc(100vh - 4em); */
+        /* background-color: rgba(137, 43, 226, 0.267); */
+        background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.322), rgba(243, 222, 33, 0.342));
+    }
+    
 }
