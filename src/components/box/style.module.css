@@ -80,8 +80,10 @@
 
 .card {
     width: 15%;
-    height: 30vh;
-    min-width: 10%;
+    height: auto;
+    margin: 1em auto;
+    background-color: white;
+
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -137,3 +139,53 @@
     justify-content: space-evenly;
     display: flex;
 }
+
+@media(max-width: 1500px) {
+
+    .card {
+        width: 27%;
+        height: auto;
+        margin: 1em 1em;
+    }
+    .span {
+        font-size: 0.8em;
+    }
+
+    .data {
+        margin-bottom: 10px;
+    }
+
+    .data h1 {
+        font-size: 1em;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-width: 800px) {
+    .card {
+        width: 30%;
+        height: auto;
+        margin: 1em auto;
+    }
+    .span {
+        font-size: 0.8em;
+    }
+
+    .data {
+        margin-bottom: 10px;
+    }
+
+    .data h1 {
+        font-size: 1em;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+}
+

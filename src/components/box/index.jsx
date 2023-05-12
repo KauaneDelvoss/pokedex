@@ -1,10 +1,11 @@
 import style from './style.module.css';
 import Loading from '../../img/loading.svg';
+import Interrogacao from '../../img/interrogacao.png';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function Box({ url, name }) {
+function Box({ url, name, childToParent }) {
     const [poke, setPoke] = useState({})
     const [isLoading, setIsLoading] = useState(false)
 
@@ -33,7 +34,7 @@ function Box({ url, name }) {
         <div className={`${style.card} `}>
             <Link className={style.link} to={"/pokemon/" + (Object.keys(poke).lenght > 0 ? 1 : poke.id)} >
 
-                <img src={isLoading ? Loading : (Object.keys(poke).length > 0 ? poke.sprites.front_default : "no image")} alt="" className={`${style.img} ${poke?.types ? style[poke.types[0].type.name] : ''}`}  />
+                <img src={isLoading ? Loading : (Object.keys(poke).length > 0 ? (poke.sprites.front_default? poke.sprites.front_default : Interrogacao ) : Interrogacao )} alt="" className={`${style.img} ${poke?.types ? style[poke.types[0].type.name] : ''}`}  />
                 <div className={style.data}>
                     <h1>
                         {name}
