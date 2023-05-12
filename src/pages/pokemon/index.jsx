@@ -31,7 +31,7 @@ function Pokemon(activeTab) {
     return (
         <Main>
             <Fragment>
-                <Tab childToParent={childToParent}/>
+                <Tab childToParent={childToParent} poke={poke}/>
             </Fragment>
             <Fragment>
                 {tab === "tab1" ? <FirstTab getPokemonById={getPokemonById} poke={poke}/> : <SecondTab/>}
